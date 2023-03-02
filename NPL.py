@@ -6,7 +6,7 @@ def load_models():
     french_model = spacy.load("./models/fr/")
     english_model = spacy.load("./models/en/")
     models = {"en": english_model, "fr": french_model}
-    return models 
+    return models
 def process_text(doc, selected_entities, anonymize=False):
     tokens = []
     for token in doc:
@@ -24,7 +24,7 @@ def process_text(doc, selected_entities, anonymize=False):
                 anonmized_tokens.append(("X" * len(token[0]), token[1], token[2]))
             else:
                 anonmized_tokens.append(token)
-        return anonmized_tokens     return tokens 
+        return anonmized_tokens     return tokens
 models = load_models() selected_language = st.sidebar.selectbox("Select a language", options=["en", "fr"])
 selected_entities = st.sidebar.multiselect(
     "Select the entities you want to detect",
