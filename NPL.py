@@ -4,7 +4,8 @@
 # In[63]:
 
 
-import spacy
+import spacy_streamlit
+models = ["en_core_web_sm", "en_core_web_md"]
 
 
 # In[64]:
