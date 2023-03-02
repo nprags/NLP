@@ -1,2 +1,3 @@
 spacy
 spacy-streamlit
+annotated_text
