@@ -3,10 +3,10 @@ import spacy
 from annotated_text import annotated_text
 @st.cache(show_spinner=False, allow_output_mutation=True, suppress_st_warning=True)
 def load_models():
-    french_model = spacy.load("./models/fr/")
-    english_model = spacy.load("./models/en/")
-    models = {"en": english_model, "fr": french_model}
-    return models
+    french_model = spacy.load("./models/fr/")
+    english_model = spacy.load("./models/en/")
+    models = {"en": english_model, "fr": french_model}
+    return models
 def process_text(doc, selected_entities, anonymize=False):
     tokens = []
     for token in doc:
